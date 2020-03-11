@@ -41,24 +41,29 @@ template<class stacktype >stacktype stack <stacktype>:: Pop()
 
 int main(void)
 {
-    stack<int> s1,s2;
-    int i;
+    stack<string> s1,s2;
+    string str;
+    int i=1,store,op;
 
-    s1.Push('R');
-    s2.Push('P');
-    s1.Push('u');
-    s2.Push('o');
-    s1.Push('s');
-    s2.Push('w');
-    s1.Push('h');
-    s2.Push('a');
-    s1.Push('i');
-    s2.Push('r');
+    cout<< "Enter Your choice: ";
 
-    for(i=0 ; i<5 ; i++)
+    while(i == 1)
     {
-        cout<< "POP: "<< s1.Pop()<<endl;
-        cout<< "POP2: "<< s2.Pop()<<endl;
+        cout<< "\n1.Push \n2.Pop \nAns: ";
+        cin>> op;
+
+        if(op == 1)
+        {
+            cout<< "Enter the element to Push: ";
+            cin>> str;
+            s1.Push(str);
+        }
+        if(op == 2)
+        {
+            cout<< "POP: "<< s1.Pop()<<endl;
+        }
+        cout<< "Enter 1 to continue: ";
+        cin>> i;
     }
 }
 
